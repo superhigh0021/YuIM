@@ -21,10 +21,10 @@ class LogSendRequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<LogSendRequest> _instance;
 } _LogSendRequest_default_instance_;
-class LogSendReponseDefaultTypeInternal {
+class LogSendResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<LogSendReponse> _instance;
-} _LogSendReponse_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<LogSendResponse> _instance;
+} _LogSendResponse_default_instance_;
 }  // namespace ik
 static void InitDefaultsLogSendRequest_LogSend_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -40,23 +40,23 @@ static void InitDefaultsLogSendRequest_LogSend_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_LogSendRequest_LogSend_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLogSendRequest_LogSend_2eproto}, {}};
 
-static void InitDefaultsLogSendReponse_LogSend_2eproto() {
+static void InitDefaultsLogSendResponse_LogSend_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ik::_LogSendReponse_default_instance_;
-    new (ptr) ::ik::LogSendReponse();
+    void* ptr = &::ik::_LogSendResponse_default_instance_;
+    new (ptr) ::ik::LogSendResponse();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ik::LogSendReponse::InitAsDefaultInstance();
+  ::ik::LogSendResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_LogSendReponse_LogSend_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLogSendReponse_LogSend_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_LogSendResponse_LogSend_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLogSendResponse_LogSend_2eproto}, {}};
 
 void InitDefaults_LogSend_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_LogSendRequest_LogSend_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_LogSendReponse_LogSend_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LogSendResponse_LogSend_2eproto.base);
 }
 
 ::google::protobuf::Metadata file_level_metadata_LogSend_2eproto[2];
@@ -72,22 +72,22 @@ const ::google::protobuf::uint32 TableStruct_LogSend_2eproto::offsets[] PROTOBUF
   PROTOBUF_FIELD_OFFSET(::ik::LogSendRequest, node_name_),
   PROTOBUF_FIELD_OFFSET(::ik::LogSendRequest, time_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ik::LogSendReponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ik::LogSendResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ik::LogSendReponse, serial_),
-  PROTOBUF_FIELD_OFFSET(::ik::LogSendReponse, is_end_),
-  PROTOBUF_FIELD_OFFSET(::ik::LogSendReponse, msg_),
+  PROTOBUF_FIELD_OFFSET(::ik::LogSendResponse, serial_),
+  PROTOBUF_FIELD_OFFSET(::ik::LogSendResponse, is_end_),
+  PROTOBUF_FIELD_OFFSET(::ik::LogSendResponse, msg_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ik::LogSendRequest)},
-  { 7, -1, sizeof(::ik::LogSendReponse)},
+  { 7, -1, sizeof(::ik::LogSendResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik::_LogSendRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::ik::_LogSendReponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::ik::_LogSendResponse_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_LogSend_2eproto = {
@@ -98,14 +98,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 const char descriptor_table_protodef_LogSend_2eproto[] =
   "\n\rLogSend.proto\022\002ik\"1\n\016LogSendRequest\022\021\n"
-  "\tnode_name\030\001 \001(\014\022\014\n\004time\030\002 \001(\014\"=\n\016LogSen"
-  "dReponse\022\016\n\006serial\030\001 \001(\005\022\016\n\006is_end\030\002 \001(\010"
-  "\022\013\n\003msg\030\003 \001(\014b\006proto3"
+  "\tnode_name\030\001 \001(\014\022\014\n\004time\030\002 \001(\014\">\n\017LogSen"
+  "dResponse\022\016\n\006serial\030\001 \001(\005\022\016\n\006is_end\030\002 \001("
+  "\010\022\013\n\003msg\030\003 \001(\014b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_LogSend_2eproto = {
   false, InitDefaults_LogSend_2eproto, 
   descriptor_table_protodef_LogSend_2eproto,
-  "LogSend.proto", &assign_descriptors_table_LogSend_2eproto, 141,
+  "LogSend.proto", &assign_descriptors_table_LogSend_2eproto, 142,
 };
 
 void AddDescriptors_LogSend_2eproto() {
@@ -465,24 +465,24 @@ void LogSendRequest::InternalSwap(LogSendRequest* other) {
 
 // ===================================================================
 
-void LogSendReponse::InitAsDefaultInstance() {
+void LogSendResponse::InitAsDefaultInstance() {
 }
-class LogSendReponse::HasBitSetters {
+class LogSendResponse::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int LogSendReponse::kSerialFieldNumber;
-const int LogSendReponse::kIsEndFieldNumber;
-const int LogSendReponse::kMsgFieldNumber;
+const int LogSendResponse::kSerialFieldNumber;
+const int LogSendResponse::kIsEndFieldNumber;
+const int LogSendResponse::kMsgFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-LogSendReponse::LogSendReponse()
+LogSendResponse::LogSendResponse()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ik.LogSendReponse)
+  // @@protoc_insertion_point(constructor:ik.LogSendResponse)
 }
-LogSendReponse::LogSendReponse(const LogSendReponse& from)
+LogSendResponse::LogSendResponse(const LogSendResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
@@ -493,38 +493,38 @@ LogSendReponse::LogSendReponse(const LogSendReponse& from)
   ::memcpy(&serial_, &from.serial_,
     static_cast<size_t>(reinterpret_cast<char*>(&is_end_) -
     reinterpret_cast<char*>(&serial_)) + sizeof(is_end_));
-  // @@protoc_insertion_point(copy_constructor:ik.LogSendReponse)
+  // @@protoc_insertion_point(copy_constructor:ik.LogSendResponse)
 }
 
-void LogSendReponse::SharedCtor() {
+void LogSendResponse::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
-      &scc_info_LogSendReponse_LogSend_2eproto.base);
+      &scc_info_LogSendResponse_LogSend_2eproto.base);
   msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&serial_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&is_end_) -
       reinterpret_cast<char*>(&serial_)) + sizeof(is_end_));
 }
 
-LogSendReponse::~LogSendReponse() {
-  // @@protoc_insertion_point(destructor:ik.LogSendReponse)
+LogSendResponse::~LogSendResponse() {
+  // @@protoc_insertion_point(destructor:ik.LogSendResponse)
   SharedDtor();
 }
 
-void LogSendReponse::SharedDtor() {
+void LogSendResponse::SharedDtor() {
   msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void LogSendReponse::SetCachedSize(int size) const {
+void LogSendResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const LogSendReponse& LogSendReponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_LogSendReponse_LogSend_2eproto.base);
+const LogSendResponse& LogSendResponse::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_LogSendResponse_LogSend_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void LogSendReponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:ik.LogSendReponse)
+void LogSendResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:ik.LogSendResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -537,9 +537,9 @@ void LogSendReponse::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* LogSendReponse::_InternalParse(const char* begin, const char* end, void* object,
+const char* LogSendResponse::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<LogSendReponse*>(object);
+  auto msg = static_cast<LogSendResponse*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -602,11 +602,11 @@ len_delim_till_end:
                                {parser_till_end, object}, size);
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LogSendReponse::MergePartialFromCodedStream(
+bool LogSendResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ik.LogSendReponse)
+  // @@protoc_insertion_point(parse_start:ik.LogSendResponse)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -661,18 +661,18 @@ bool LogSendReponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ik.LogSendReponse)
+  // @@protoc_insertion_point(parse_success:ik.LogSendResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ik.LogSendReponse)
+  // @@protoc_insertion_point(parse_failure:ik.LogSendResponse)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void LogSendReponse::SerializeWithCachedSizes(
+void LogSendResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ik.LogSendReponse)
+  // @@protoc_insertion_point(serialize_start:ik.LogSendResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -696,12 +696,12 @@ void LogSendReponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ik.LogSendReponse)
+  // @@protoc_insertion_point(serialize_end:ik.LogSendResponse)
 }
 
-::google::protobuf::uint8* LogSendReponse::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* LogSendResponse::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ik.LogSendReponse)
+  // @@protoc_insertion_point(serialize_to_array_start:ik.LogSendResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -726,12 +726,12 @@ void LogSendReponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ik.LogSendReponse)
+  // @@protoc_insertion_point(serialize_to_array_end:ik.LogSendResponse)
   return target;
 }
 
-size_t LogSendReponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ik.LogSendReponse)
+size_t LogSendResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ik.LogSendResponse)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -767,23 +767,23 @@ size_t LogSendReponse::ByteSizeLong() const {
   return total_size;
 }
 
-void LogSendReponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ik.LogSendReponse)
+void LogSendResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ik.LogSendResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  const LogSendReponse* source =
-      ::google::protobuf::DynamicCastToGenerated<LogSendReponse>(
+  const LogSendResponse* source =
+      ::google::protobuf::DynamicCastToGenerated<LogSendResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik.LogSendReponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik.LogSendResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik.LogSendReponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik.LogSendResponse)
     MergeFrom(*source);
   }
 }
 
-void LogSendReponse::MergeFrom(const LogSendReponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ik.LogSendReponse)
+void LogSendResponse::MergeFrom(const LogSendResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ik.LogSendResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -801,29 +801,29 @@ void LogSendReponse::MergeFrom(const LogSendReponse& from) {
   }
 }
 
-void LogSendReponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ik.LogSendReponse)
+void LogSendResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ik.LogSendResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void LogSendReponse::CopyFrom(const LogSendReponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ik.LogSendReponse)
+void LogSendResponse::CopyFrom(const LogSendResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ik.LogSendResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool LogSendReponse::IsInitialized() const {
+bool LogSendResponse::IsInitialized() const {
   return true;
 }
 
-void LogSendReponse::Swap(LogSendReponse* other) {
+void LogSendResponse::Swap(LogSendResponse* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void LogSendReponse::InternalSwap(LogSendReponse* other) {
+void LogSendResponse::InternalSwap(LogSendResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   msg_.Swap(&other->msg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
@@ -832,7 +832,7 @@ void LogSendReponse::InternalSwap(LogSendReponse* other) {
   swap(is_end_, other->is_end_);
 }
 
-::google::protobuf::Metadata LogSendReponse::GetMetadata() const {
+::google::protobuf::Metadata LogSendResponse::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_LogSend_2eproto);
   return ::file_level_metadata_LogSend_2eproto[kIndexInFileMessages];
 }
@@ -845,8 +845,8 @@ namespace protobuf {
 template<> PROTOBUF_NOINLINE ::ik::LogSendRequest* Arena::CreateMaybeMessage< ::ik::LogSendRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ik::LogSendRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ik::LogSendReponse* Arena::CreateMaybeMessage< ::ik::LogSendReponse >(Arena* arena) {
-  return Arena::CreateInternal< ::ik::LogSendReponse >(arena);
+template<> PROTOBUF_NOINLINE ::ik::LogSendResponse* Arena::CreateMaybeMessage< ::ik::LogSendResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::ik::LogSendResponse >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

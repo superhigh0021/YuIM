@@ -11,7 +11,7 @@ message LogSendRequest {
     bytes time = 2;
 }
 
-message LogSendReponse {
+message LogSendResponse {
     int32 serial = 1;   //序号
     bool is_end = 2;    //是否结束了
     bytes msg = 3;      //消息
