@@ -26,7 +26,7 @@ void LogSend::run(std::string ip, uint16_t port) {
 }
 
 // 读取文件并发送消息，绑定到muduo的on_message消息回调
-void sendFile(const muduo::net::TcpConnectionPtr& conn, muduo::net::Buffer* buf, muduo::Timestamp stamp) {
+void LogSend::sendFile(const muduo::net::TcpConnectionPtr& conn, muduo::net::Buffer* buf, muduo::Timestamp stamp) {
     std::string recv = buf->retrieveAllAsString().c_str();
     ik::LogSendRequest request;
     request.ParseFromString(recv);
@@ -62,7 +62,7 @@ void sendFile(const muduo::net::TcpConnectionPtr& conn, muduo::net::Buffer* buf,
 }
 
 // 关闭连接
-void closeConn(const muduo::net::TcpConnectionPtr& conn) {
+void LogSend::closeConn(const muduo::net::TcpConnectionPtr& conn) {
     if (!conn->connected()) {
         // 与rpc client断开连接
         conn->shutdown();
