@@ -1,5 +1,5 @@
 #pragma once
-#include "auxiliary_process/LogSend.pb.h"
+#include "LogSend.pb.h"
 
 #include <muduo/net/TcpServer.h>
 #include <muduo/net/TcpConnection.h>
