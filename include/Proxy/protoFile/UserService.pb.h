@@ -57,12 +57,12 @@ extern ErrorMsgDefaultTypeInternal _ErrorMsg_default_instance_;
 class LoginOutRequest;
 class LoginOutRequestDefaultTypeInternal;
 extern LoginOutRequestDefaultTypeInternal _LoginOutRequest_default_instance_;
-class LoginReponse;
-class LoginReponseDefaultTypeInternal;
-extern LoginReponseDefaultTypeInternal _LoginReponse_default_instance_;
 class LoginRequest;
 class LoginRequestDefaultTypeInternal;
 extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
+class LoginResponse;
+class LoginResponseDefaultTypeInternal;
+extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
 class RegisterRequest;
 class RegisterRequestDefaultTypeInternal;
 extern RegisterRequestDefaultTypeInternal _RegisterRequest_default_instance_;
@@ -74,8 +74,8 @@ namespace google {
 namespace protobuf {
 template<> ::ik_UserService::ErrorMsg* Arena::CreateMaybeMessage<::ik_UserService::ErrorMsg>(Arena*);
 template<> ::ik_UserService::LoginOutRequest* Arena::CreateMaybeMessage<::ik_UserService::LoginOutRequest>(Arena*);
-template<> ::ik_UserService::LoginReponse* Arena::CreateMaybeMessage<::ik_UserService::LoginReponse>(Arena*);
 template<> ::ik_UserService::LoginRequest* Arena::CreateMaybeMessage<::ik_UserService::LoginRequest>(Arena*);
+template<> ::ik_UserService::LoginResponse* Arena::CreateMaybeMessage<::ik_UserService::LoginResponse>(Arena*);
 template<> ::ik_UserService::RegisterRequest* Arena::CreateMaybeMessage<::ik_UserService::RegisterRequest>(Arena*);
 template<> ::ik_UserService::RegisterResponse* Arena::CreateMaybeMessage<::ik_UserService::RegisterResponse>(Arena*);
 }  // namespace protobuf
@@ -331,25 +331,25 @@ class ErrorMsg :
 };
 // -------------------------------------------------------------------
 
-class LoginReponse :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_UserService.LoginReponse) */ {
+class LoginResponse :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_UserService.LoginResponse) */ {
  public:
-  LoginReponse();
-  virtual ~LoginReponse();
+  LoginResponse();
+  virtual ~LoginResponse();
 
-  LoginReponse(const LoginReponse& from);
+  LoginResponse(const LoginResponse& from);
 
-  inline LoginReponse& operator=(const LoginReponse& from) {
+  inline LoginResponse& operator=(const LoginResponse& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  LoginReponse(LoginReponse&& from) noexcept
-    : LoginReponse() {
+  LoginResponse(LoginResponse&& from) noexcept
+    : LoginResponse() {
     *this = ::std::move(from);
   }
 
-  inline LoginReponse& operator=(LoginReponse&& from) noexcept {
+  inline LoginResponse& operator=(LoginResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -361,34 +361,34 @@ class LoginReponse :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const LoginReponse& default_instance();
+  static const LoginResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const LoginReponse* internal_default_instance() {
-    return reinterpret_cast<const LoginReponse*>(
-               &_LoginReponse_default_instance_);
+  static inline const LoginResponse* internal_default_instance() {
+    return reinterpret_cast<const LoginResponse*>(
+               &_LoginResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  void Swap(LoginReponse* other);
-  friend void swap(LoginReponse& a, LoginReponse& b) {
+  void Swap(LoginResponse* other);
+  friend void swap(LoginResponse& a, LoginResponse& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline LoginReponse* New() const final {
-    return CreateMaybeMessage<LoginReponse>(nullptr);
+  inline LoginResponse* New() const final {
+    return CreateMaybeMessage<LoginResponse>(nullptr);
   }
 
-  LoginReponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<LoginReponse>(arena);
+  LoginResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<LoginResponse>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const LoginReponse& from);
-  void MergeFrom(const LoginReponse& from);
+  void CopyFrom(const LoginResponse& from);
+  void MergeFrom(const LoginResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -410,7 +410,7 @@ class LoginReponse :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(LoginReponse* other);
+  void InternalSwap(LoginResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -441,7 +441,7 @@ class LoginReponse :
   bool is_success() const;
   void set_is_success(bool value);
 
-  // @@protoc_insertion_point(class_scope:ik_UserService.LoginReponse)
+  // @@protoc_insertion_point(class_scope:ik_UserService.LoginResponse)
  private:
   class HasBitSetters;
 
@@ -834,7 +834,7 @@ class UserServiceRpc : public ::google::protobuf::Service {
 
   virtual void Login(::google::protobuf::RpcController* controller,
                        const ::ik_UserService::LoginRequest* request,
-                       ::ik_UserService::LoginReponse* response,
+                       ::ik_UserService::LoginResponse* response,
                        ::google::protobuf::Closure* done);
   virtual void Registe(::google::protobuf::RpcController* controller,
                        const ::ik_UserService::RegisterRequest* request,
@@ -875,7 +875,7 @@ class UserServiceRpc_Stub : public UserServiceRpc {
 
   void Login(::google::protobuf::RpcController* controller,
                        const ::ik_UserService::LoginRequest* request,
-                       ::ik_UserService::LoginReponse* response,
+                       ::ik_UserService::LoginResponse* response,
                        ::google::protobuf::Closure* done);
   void Registe(::google::protobuf::RpcController* controller,
                        const ::ik_UserService::RegisterRequest* request,
@@ -1029,55 +1029,55 @@ inline void ErrorMsg::set_allocated_message(::std::string* message) {
 
 // -------------------------------------------------------------------
 
-// LoginReponse
+// LoginResponse
 
 // bool is_success = 1;
-inline void LoginReponse::clear_is_success() {
+inline void LoginResponse::clear_is_success() {
   is_success_ = false;
 }
-inline bool LoginReponse::is_success() const {
-  // @@protoc_insertion_point(field_get:ik_UserService.LoginReponse.is_success)
+inline bool LoginResponse::is_success() const {
+  // @@protoc_insertion_point(field_get:ik_UserService.LoginResponse.is_success)
   return is_success_;
 }
-inline void LoginReponse::set_is_success(bool value) {
+inline void LoginResponse::set_is_success(bool value) {
   
   is_success_ = value;
-  // @@protoc_insertion_point(field_set:ik_UserService.LoginReponse.is_success)
+  // @@protoc_insertion_point(field_set:ik_UserService.LoginResponse.is_success)
 }
 
 // .ik_UserService.ErrorMsg msg = 2;
-inline bool LoginReponse::has_msg() const {
+inline bool LoginResponse::has_msg() const {
   return this != internal_default_instance() && msg_ != nullptr;
 }
-inline void LoginReponse::clear_msg() {
+inline void LoginResponse::clear_msg() {
   if (GetArenaNoVirtual() == nullptr && msg_ != nullptr) {
     delete msg_;
   }
   msg_ = nullptr;
 }
-inline const ::ik_UserService::ErrorMsg& LoginReponse::msg() const {
+inline const ::ik_UserService::ErrorMsg& LoginResponse::msg() const {
   const ::ik_UserService::ErrorMsg* p = msg_;
-  // @@protoc_insertion_point(field_get:ik_UserService.LoginReponse.msg)
+  // @@protoc_insertion_point(field_get:ik_UserService.LoginResponse.msg)
   return p != nullptr ? *p : *reinterpret_cast<const ::ik_UserService::ErrorMsg*>(
       &::ik_UserService::_ErrorMsg_default_instance_);
 }
-inline ::ik_UserService::ErrorMsg* LoginReponse::release_msg() {
-  // @@protoc_insertion_point(field_release:ik_UserService.LoginReponse.msg)
+inline ::ik_UserService::ErrorMsg* LoginResponse::release_msg() {
+  // @@protoc_insertion_point(field_release:ik_UserService.LoginResponse.msg)
   
   ::ik_UserService::ErrorMsg* temp = msg_;
   msg_ = nullptr;
   return temp;
 }
-inline ::ik_UserService::ErrorMsg* LoginReponse::mutable_msg() {
+inline ::ik_UserService::ErrorMsg* LoginResponse::mutable_msg() {
   
   if (msg_ == nullptr) {
     auto* p = CreateMaybeMessage<::ik_UserService::ErrorMsg>(GetArenaNoVirtual());
     msg_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:ik_UserService.LoginReponse.msg)
+  // @@protoc_insertion_point(field_mutable:ik_UserService.LoginResponse.msg)
   return msg_;
 }
-inline void LoginReponse::set_allocated_msg(::ik_UserService::ErrorMsg* msg) {
+inline void LoginResponse::set_allocated_msg(::ik_UserService::ErrorMsg* msg) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete msg_;
@@ -1093,7 +1093,7 @@ inline void LoginReponse::set_allocated_msg(::ik_UserService::ErrorMsg* msg) {
     
   }
   msg_ = msg;
-  // @@protoc_insertion_point(field_set_allocated:ik_UserService.LoginReponse.msg)
+  // @@protoc_insertion_point(field_set_allocated:ik_UserService.LoginResponse.msg)
 }
 
 // -------------------------------------------------------------------

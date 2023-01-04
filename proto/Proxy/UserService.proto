@@ -16,7 +16,7 @@ message ErrorMsg {
     bytes message = 2;
 }
 
-message LoginReponse {
+message LoginResponse {
     bool is_success = 1;
     ErrorMsg msg = 2;
 }
@@ -39,7 +39,7 @@ message LoginOutRequest {
 
 //服务接口
 service UserServiceRpc {
-    rpc Login(LoginRequest) returns(LoginReponse);
+    rpc Login(LoginRequest) returns(LoginResponse);
     rpc Registe(RegisterRequest) returns(RegisterResponse);
     rpc LoginOut (LoginOutRequest)returns (google.protobuf.Empty);
 }
