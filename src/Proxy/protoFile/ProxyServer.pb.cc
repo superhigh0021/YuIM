@@ -16,66 +16,95 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-namespace ik_ChatServer {
-class MsgRequestDefaultTypeInternal {
+namespace ik_Proxy {
+class ProxyMessageDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<MsgRequest> _instance;
-} _MsgRequest_default_instance_;
-}  // namespace ik_ChatServer
-static void InitDefaultsMsgRequest_ProxyServer_2eproto() {
+  ::google::protobuf::internal::ExplicitlyConstructed<ProxyMessage> _instance;
+} _ProxyMessage_default_instance_;
+class ProxyResponseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ProxyResponse> _instance;
+} _ProxyResponse_default_instance_;
+}  // namespace ik_Proxy
+static void InitDefaultsProxyMessage_ProxyServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ik_ChatServer::_MsgRequest_default_instance_;
-    new (ptr) ::ik_ChatServer::MsgRequest();
+    void* ptr = &::ik_Proxy::_ProxyMessage_default_instance_;
+    new (ptr) ::ik_Proxy::ProxyMessage();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ik_ChatServer::MsgRequest::InitAsDefaultInstance();
+  ::ik_Proxy::ProxyMessage::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_MsgRequest_ProxyServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMsgRequest_ProxyServer_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_ProxyMessage_ProxyServer_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsProxyMessage_ProxyServer_2eproto}, {}};
+
+static void InitDefaultsProxyResponse_ProxyServer_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::ik_Proxy::_ProxyResponse_default_instance_;
+    new (ptr) ::ik_Proxy::ProxyResponse();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::ik_Proxy::ProxyResponse::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_ProxyResponse_ProxyServer_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsProxyResponse_ProxyServer_2eproto}, {}};
 
 void InitDefaults_ProxyServer_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_MsgRequest_ProxyServer_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ProxyMessage_ProxyServer_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ProxyResponse_ProxyServer_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_ProxyServer_2eproto[1];
+::google::protobuf::Metadata file_level_metadata_ProxyServer_2eproto[2];
 constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_ProxyServer_2eproto = nullptr;
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_ProxyServer_2eproto = nullptr;
 
 const ::google::protobuf::uint32 TableStruct_ProxyServer_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ik_ChatServer::MsgRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ik_Proxy::ProxyMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ik_ChatServer::MsgRequest, id_),
-  PROTOBUF_FIELD_OFFSET(::ik_ChatServer::MsgRequest, msg_),
+  PROTOBUF_FIELD_OFFSET(::ik_Proxy::ProxyMessage, type_),
+  PROTOBUF_FIELD_OFFSET(::ik_Proxy::ProxyMessage, requestmsg_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::ik_Proxy::ProxyResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::ik_Proxy::ProxyResponse, type_),
+  PROTOBUF_FIELD_OFFSET(::ik_Proxy::ProxyResponse, responsemsg_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ik_ChatServer::MsgRequest)},
+  { 0, -1, sizeof(::ik_Proxy::ProxyMessage)},
+  { 7, -1, sizeof(::ik_Proxy::ProxyResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_ChatServer::_MsgRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_Proxy::_ProxyMessage_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_Proxy::_ProxyResponse_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_ProxyServer_2eproto = {
   {}, AddDescriptors_ProxyServer_2eproto, "ProxyServer.proto", schemas,
   file_default_instances, TableStruct_ProxyServer_2eproto::offsets,
-  file_level_metadata_ProxyServer_2eproto, 1, file_level_enum_descriptors_ProxyServer_2eproto, file_level_service_descriptors_ProxyServer_2eproto,
+  file_level_metadata_ProxyServer_2eproto, 2, file_level_enum_descriptors_ProxyServer_2eproto, file_level_service_descriptors_ProxyServer_2eproto,
 };
 
 const char descriptor_table_protodef_ProxyServer_2eproto[] =
-  "\n\021ProxyServer.proto\022\rik_ChatServer\"%\n\nMs"
-  "gRequest\022\n\n\002id\030\001 \001(\005\022\013\n\003msg\030\002 \001(\014b\006proto"
-  "3"
+  "\n\021ProxyServer.proto\022\010ik_Proxy\"0\n\014ProxyMe"
+  "ssage\022\014\n\004type\030\001 \001(\014\022\022\n\nrequestMsg\030\002 \001(\014\""
+  "2\n\rProxyResponse\022\014\n\004type\030\001 \001(\014\022\023\n\013respon"
+  "seMsg\030\002 \001(\014b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ProxyServer_2eproto = {
   false, InitDefaults_ProxyServer_2eproto, 
   descriptor_table_protodef_ProxyServer_2eproto,
-  "ProxyServer.proto", &assign_descriptors_table_ProxyServer_2eproto, 81,
+  "ProxyServer.proto", &assign_descriptors_table_ProxyServer_2eproto, 139,
 };
 
 void AddDescriptors_ProxyServer_2eproto() {
@@ -87,78 +116,82 @@ void AddDescriptors_ProxyServer_2eproto() {
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_ProxyServer_2eproto = []() { AddDescriptors_ProxyServer_2eproto(); return true; }();
-namespace ik_ChatServer {
+namespace ik_Proxy {
 
 // ===================================================================
 
-void MsgRequest::InitAsDefaultInstance() {
+void ProxyMessage::InitAsDefaultInstance() {
 }
-class MsgRequest::HasBitSetters {
+class ProxyMessage::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int MsgRequest::kIdFieldNumber;
-const int MsgRequest::kMsgFieldNumber;
+const int ProxyMessage::kTypeFieldNumber;
+const int ProxyMessage::kRequestMsgFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-MsgRequest::MsgRequest()
+ProxyMessage::ProxyMessage()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(constructor:ik_Proxy.ProxyMessage)
 }
-MsgRequest::MsgRequest(const MsgRequest& from)
+ProxyMessage::ProxyMessage(const ProxyMessage& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.msg().size() > 0) {
-    msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.msg_);
+  type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.type().size() > 0) {
+    type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.type_);
   }
-  id_ = from.id_;
-  // @@protoc_insertion_point(copy_constructor:ik_ChatServer.MsgRequest)
+  requestmsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.requestmsg().size() > 0) {
+    requestmsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.requestmsg_);
+  }
+  // @@protoc_insertion_point(copy_constructor:ik_Proxy.ProxyMessage)
 }
 
-void MsgRequest::SharedCtor() {
+void ProxyMessage::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
-      &scc_info_MsgRequest_ProxyServer_2eproto.base);
-  msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_ = 0;
+      &scc_info_ProxyMessage_ProxyServer_2eproto.base);
+  type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  requestmsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-MsgRequest::~MsgRequest() {
-  // @@protoc_insertion_point(destructor:ik_ChatServer.MsgRequest)
+ProxyMessage::~ProxyMessage() {
+  // @@protoc_insertion_point(destructor:ik_Proxy.ProxyMessage)
   SharedDtor();
 }
 
-void MsgRequest::SharedDtor() {
-  msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+void ProxyMessage::SharedDtor() {
+  type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  requestmsg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void MsgRequest::SetCachedSize(int size) const {
+void ProxyMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const MsgRequest& MsgRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_MsgRequest_ProxyServer_2eproto.base);
+const ProxyMessage& ProxyMessage::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ProxyMessage_ProxyServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void MsgRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:ik_ChatServer.MsgRequest)
+void ProxyMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:ik_Proxy.ProxyMessage)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_ = 0;
+  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  requestmsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* MsgRequest::_InternalParse(const char* begin, const char* end, void* object,
+const char* ProxyMessage::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<MsgRequest*>(object);
+  auto msg = static_cast<ProxyMessage*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -168,19 +201,27 @@ const char* MsgRequest::_InternalParse(const char* begin, const char* end, void*
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // int32 id = 1;
+      // bytes type = 1;
       case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        msg->set_id(::google::protobuf::internal::ReadVarint(&ptr));
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_type();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
         break;
       }
-      // bytes msg = 2;
+      // bytes requestMsg = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_msg();
+        object = msg->mutable_requestmsg();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParser;
           goto string_till_end;
@@ -214,34 +255,32 @@ len_delim_till_end:
                                {parser_till_end, object}, size);
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool MsgRequest::MergePartialFromCodedStream(
+bool ProxyMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(parse_start:ik_Proxy.ProxyMessage)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 id = 1;
+      // bytes type = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &id_)));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_type()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // bytes msg = 2;
+      // bytes requestMsg = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_msg()));
+                input, this->mutable_requestmsg()));
         } else {
           goto handle_unusual;
         }
@@ -260,67 +299,70 @@ bool MsgRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(parse_success:ik_Proxy.ProxyMessage)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(parse_failure:ik_Proxy.ProxyMessage)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void MsgRequest::SerializeWithCachedSizes(
+void ProxyMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(serialize_start:ik_Proxy.ProxyMessage)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 id = 1;
-  if (this->id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
+  // bytes type = 1;
+  if (this->type().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      1, this->type(), output);
   }
 
-  // bytes msg = 2;
-  if (this->msg().size() > 0) {
+  // bytes requestMsg = 2;
+  if (this->requestmsg().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->msg(), output);
+      2, this->requestmsg(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(serialize_end:ik_Proxy.ProxyMessage)
 }
 
-::google::protobuf::uint8* MsgRequest::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* ProxyMessage::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:ik_Proxy.ProxyMessage)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 id = 1;
-  if (this->id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
-  }
-
-  // bytes msg = 2;
-  if (this->msg().size() > 0) {
+  // bytes type = 1;
+  if (this->type().size() > 0) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->msg(), target);
+        1, this->type(), target);
+  }
+
+  // bytes requestMsg = 2;
+  if (this->requestmsg().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        2, this->requestmsg(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:ik_Proxy.ProxyMessage)
   return target;
 }
 
-size_t MsgRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ik_ChatServer.MsgRequest)
+size_t ProxyMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ik_Proxy.ProxyMessage)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -332,18 +374,18 @@ size_t MsgRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // bytes msg = 2;
-  if (this->msg().size() > 0) {
+  // bytes type = 1;
+  if (this->type().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->msg());
+        this->type());
   }
 
-  // int32 id = 1;
-  if (this->id() != 0) {
+  // bytes requestMsg = 2;
+  if (this->requestmsg().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->id());
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->requestmsg());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -351,79 +393,428 @@ size_t MsgRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void MsgRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ik_ChatServer.MsgRequest)
+void ProxyMessage::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ik_Proxy.ProxyMessage)
   GOOGLE_DCHECK_NE(&from, this);
-  const MsgRequest* source =
-      ::google::protobuf::DynamicCastToGenerated<MsgRequest>(
+  const ProxyMessage* source =
+      ::google::protobuf::DynamicCastToGenerated<ProxyMessage>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_Proxy.ProxyMessage)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_Proxy.ProxyMessage)
     MergeFrom(*source);
   }
 }
 
-void MsgRequest::MergeFrom(const MsgRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ik_ChatServer.MsgRequest)
+void ProxyMessage::MergeFrom(const ProxyMessage& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ik_Proxy.ProxyMessage)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.msg().size() > 0) {
+  if (from.type().size() > 0) {
 
-    msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.msg_);
+    type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.type_);
   }
-  if (from.id() != 0) {
-    set_id(from.id());
+  if (from.requestmsg().size() > 0) {
+
+    requestmsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.requestmsg_);
   }
 }
 
-void MsgRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ik_ChatServer.MsgRequest)
+void ProxyMessage::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ik_Proxy.ProxyMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void MsgRequest::CopyFrom(const MsgRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ik_ChatServer.MsgRequest)
+void ProxyMessage::CopyFrom(const ProxyMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ik_Proxy.ProxyMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool MsgRequest::IsInitialized() const {
+bool ProxyMessage::IsInitialized() const {
   return true;
 }
 
-void MsgRequest::Swap(MsgRequest* other) {
+void ProxyMessage::Swap(ProxyMessage* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void MsgRequest::InternalSwap(MsgRequest* other) {
+void ProxyMessage::InternalSwap(ProxyMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  msg_.Swap(&other->msg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  type_.Swap(&other->type_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(id_, other->id_);
+  requestmsg_.Swap(&other->requestmsg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
 }
 
-::google::protobuf::Metadata MsgRequest::GetMetadata() const {
+::google::protobuf::Metadata ProxyMessage::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ProxyServer_2eproto);
+  return ::file_level_metadata_ProxyServer_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void ProxyResponse::InitAsDefaultInstance() {
+}
+class ProxyResponse::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ProxyResponse::kTypeFieldNumber;
+const int ProxyResponse::kResponseMsgFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ProxyResponse::ProxyResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:ik_Proxy.ProxyResponse)
+}
+ProxyResponse::ProxyResponse(const ProxyResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.type().size() > 0) {
+    type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.type_);
+  }
+  responsemsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.responsemsg().size() > 0) {
+    responsemsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.responsemsg_);
+  }
+  // @@protoc_insertion_point(copy_constructor:ik_Proxy.ProxyResponse)
+}
+
+void ProxyResponse::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ProxyResponse_ProxyServer_2eproto.base);
+  type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  responsemsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+ProxyResponse::~ProxyResponse() {
+  // @@protoc_insertion_point(destructor:ik_Proxy.ProxyResponse)
+  SharedDtor();
+}
+
+void ProxyResponse::SharedDtor() {
+  type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  responsemsg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void ProxyResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ProxyResponse& ProxyResponse::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ProxyResponse_ProxyServer_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ProxyResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:ik_Proxy.ProxyResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  responsemsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ProxyResponse::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ProxyResponse*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // bytes type = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_type();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // bytes responseMsg = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_responsemsg();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ProxyResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:ik_Proxy.ProxyResponse)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // bytes type = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_type()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes responseMsg = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_responsemsg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:ik_Proxy.ProxyResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:ik_Proxy.ProxyResponse)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ProxyResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:ik_Proxy.ProxyResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bytes type = 1;
+  if (this->type().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      1, this->type(), output);
+  }
+
+  // bytes responseMsg = 2;
+  if (this->responsemsg().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      2, this->responsemsg(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:ik_Proxy.ProxyResponse)
+}
+
+::google::protobuf::uint8* ProxyResponse::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ik_Proxy.ProxyResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bytes type = 1;
+  if (this->type().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        1, this->type(), target);
+  }
+
+  // bytes responseMsg = 2;
+  if (this->responsemsg().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        2, this->responsemsg(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ik_Proxy.ProxyResponse)
+  return target;
+}
+
+size_t ProxyResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ik_Proxy.ProxyResponse)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // bytes type = 1;
+  if (this->type().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->type());
+  }
+
+  // bytes responseMsg = 2;
+  if (this->responsemsg().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->responsemsg());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ProxyResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ik_Proxy.ProxyResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ProxyResponse* source =
+      ::google::protobuf::DynamicCastToGenerated<ProxyResponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_Proxy.ProxyResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_Proxy.ProxyResponse)
+    MergeFrom(*source);
+  }
+}
+
+void ProxyResponse::MergeFrom(const ProxyResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ik_Proxy.ProxyResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.type().size() > 0) {
+
+    type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.type_);
+  }
+  if (from.responsemsg().size() > 0) {
+
+    responsemsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.responsemsg_);
+  }
+}
+
+void ProxyResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ik_Proxy.ProxyResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ProxyResponse::CopyFrom(const ProxyResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ik_Proxy.ProxyResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ProxyResponse::IsInitialized() const {
+  return true;
+}
+
+void ProxyResponse::Swap(ProxyResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ProxyResponse::InternalSwap(ProxyResponse* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  type_.Swap(&other->type_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  responsemsg_.Swap(&other->responsemsg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+}
+
+::google::protobuf::Metadata ProxyResponse::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ProxyServer_2eproto);
   return ::file_level_metadata_ProxyServer_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace ik_ChatServer
+}  // namespace ik_Proxy
 namespace google {
 namespace protobuf {
-template<> PROTOBUF_NOINLINE ::ik_ChatServer::MsgRequest* Arena::CreateMaybeMessage< ::ik_ChatServer::MsgRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::ik_ChatServer::MsgRequest >(arena);
+template<> PROTOBUF_NOINLINE ::ik_Proxy::ProxyMessage* Arena::CreateMaybeMessage< ::ik_Proxy::ProxyMessage >(Arena* arena) {
+  return Arena::CreateInternal< ::ik_Proxy::ProxyMessage >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ik_Proxy::ProxyResponse* Arena::CreateMaybeMessage< ::ik_Proxy::ProxyResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::ik_Proxy::ProxyResponse >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

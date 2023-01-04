@@ -41,46 +41,50 @@ struct TableStruct_ProxyServer_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[1]
+  static const ::google::protobuf::internal::ParseTable schema[2]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors_ProxyServer_2eproto();
-namespace ik_ChatServer {
-class MsgRequest;
-class MsgRequestDefaultTypeInternal;
-extern MsgRequestDefaultTypeInternal _MsgRequest_default_instance_;
-}  // namespace ik_ChatServer
+namespace ik_Proxy {
+class ProxyMessage;
+class ProxyMessageDefaultTypeInternal;
+extern ProxyMessageDefaultTypeInternal _ProxyMessage_default_instance_;
+class ProxyResponse;
+class ProxyResponseDefaultTypeInternal;
+extern ProxyResponseDefaultTypeInternal _ProxyResponse_default_instance_;
+}  // namespace ik_Proxy
 namespace google {
 namespace protobuf {
-template<> ::ik_ChatServer::MsgRequest* Arena::CreateMaybeMessage<::ik_ChatServer::MsgRequest>(Arena*);
+template<> ::ik_Proxy::ProxyMessage* Arena::CreateMaybeMessage<::ik_Proxy::ProxyMessage>(Arena*);
+template<> ::ik_Proxy::ProxyResponse* Arena::CreateMaybeMessage<::ik_Proxy::ProxyResponse>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace ik_ChatServer {
+namespace ik_Proxy {
 
 // ===================================================================
 
-class MsgRequest :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_ChatServer.MsgRequest) */ {
+class ProxyMessage :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_Proxy.ProxyMessage) */ {
  public:
-  MsgRequest();
-  virtual ~MsgRequest();
+  ProxyMessage();
+  virtual ~ProxyMessage();
 
-  MsgRequest(const MsgRequest& from);
+  ProxyMessage(const ProxyMessage& from);
 
-  inline MsgRequest& operator=(const MsgRequest& from) {
+  inline ProxyMessage& operator=(const ProxyMessage& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  MsgRequest(MsgRequest&& from) noexcept
-    : MsgRequest() {
+  ProxyMessage(ProxyMessage&& from) noexcept
+    : ProxyMessage() {
     *this = ::std::move(from);
   }
 
-  inline MsgRequest& operator=(MsgRequest&& from) noexcept {
+  inline ProxyMessage& operator=(ProxyMessage&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -92,34 +96,34 @@ class MsgRequest :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const MsgRequest& default_instance();
+  static const ProxyMessage& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const MsgRequest* internal_default_instance() {
-    return reinterpret_cast<const MsgRequest*>(
-               &_MsgRequest_default_instance_);
+  static inline const ProxyMessage* internal_default_instance() {
+    return reinterpret_cast<const ProxyMessage*>(
+               &_ProxyMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(MsgRequest* other);
-  friend void swap(MsgRequest& a, MsgRequest& b) {
+  void Swap(ProxyMessage* other);
+  friend void swap(ProxyMessage& a, ProxyMessage& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline MsgRequest* New() const final {
-    return CreateMaybeMessage<MsgRequest>(nullptr);
+  inline ProxyMessage* New() const final {
+    return CreateMaybeMessage<ProxyMessage>(nullptr);
   }
 
-  MsgRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<MsgRequest>(arena);
+  ProxyMessage* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ProxyMessage>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const MsgRequest& from);
-  void MergeFrom(const MsgRequest& from);
+  void CopyFrom(const ProxyMessage& from);
+  void MergeFrom(const ProxyMessage& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -141,7 +145,7 @@ class MsgRequest :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(MsgRequest* other);
+  void InternalSwap(ProxyMessage* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -157,33 +161,176 @@ class MsgRequest :
 
   // accessors -------------------------------------------------------
 
-  // bytes msg = 2;
-  void clear_msg();
-  static const int kMsgFieldNumber = 2;
-  const ::std::string& msg() const;
-  void set_msg(const ::std::string& value);
+  // bytes type = 1;
+  void clear_type();
+  static const int kTypeFieldNumber = 1;
+  const ::std::string& type() const;
+  void set_type(const ::std::string& value);
   #if LANG_CXX11
-  void set_msg(::std::string&& value);
+  void set_type(::std::string&& value);
   #endif
-  void set_msg(const char* value);
-  void set_msg(const void* value, size_t size);
-  ::std::string* mutable_msg();
-  ::std::string* release_msg();
-  void set_allocated_msg(::std::string* msg);
+  void set_type(const char* value);
+  void set_type(const void* value, size_t size);
+  ::std::string* mutable_type();
+  ::std::string* release_type();
+  void set_allocated_type(::std::string* type);
 
-  // int32 id = 1;
-  void clear_id();
-  static const int kIdFieldNumber = 1;
-  ::google::protobuf::int32 id() const;
-  void set_id(::google::protobuf::int32 value);
+  // bytes requestMsg = 2;
+  void clear_requestmsg();
+  static const int kRequestMsgFieldNumber = 2;
+  const ::std::string& requestmsg() const;
+  void set_requestmsg(const ::std::string& value);
+  #if LANG_CXX11
+  void set_requestmsg(::std::string&& value);
+  #endif
+  void set_requestmsg(const char* value);
+  void set_requestmsg(const void* value, size_t size);
+  ::std::string* mutable_requestmsg();
+  ::std::string* release_requestmsg();
+  void set_allocated_requestmsg(::std::string* requestmsg);
 
-  // @@protoc_insertion_point(class_scope:ik_ChatServer.MsgRequest)
+  // @@protoc_insertion_point(class_scope:ik_Proxy.ProxyMessage)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr msg_;
-  ::google::protobuf::int32 id_;
+  ::google::protobuf::internal::ArenaStringPtr type_;
+  ::google::protobuf::internal::ArenaStringPtr requestmsg_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ProxyServer_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ProxyResponse :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_Proxy.ProxyResponse) */ {
+ public:
+  ProxyResponse();
+  virtual ~ProxyResponse();
+
+  ProxyResponse(const ProxyResponse& from);
+
+  inline ProxyResponse& operator=(const ProxyResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ProxyResponse(ProxyResponse&& from) noexcept
+    : ProxyResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline ProxyResponse& operator=(ProxyResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const ProxyResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ProxyResponse* internal_default_instance() {
+    return reinterpret_cast<const ProxyResponse*>(
+               &_ProxyResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(ProxyResponse* other);
+  friend void swap(ProxyResponse& a, ProxyResponse& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ProxyResponse* New() const final {
+    return CreateMaybeMessage<ProxyResponse>(nullptr);
+  }
+
+  ProxyResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ProxyResponse>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ProxyResponse& from);
+  void MergeFrom(const ProxyResponse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ProxyResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes type = 1;
+  void clear_type();
+  static const int kTypeFieldNumber = 1;
+  const ::std::string& type() const;
+  void set_type(const ::std::string& value);
+  #if LANG_CXX11
+  void set_type(::std::string&& value);
+  #endif
+  void set_type(const char* value);
+  void set_type(const void* value, size_t size);
+  ::std::string* mutable_type();
+  ::std::string* release_type();
+  void set_allocated_type(::std::string* type);
+
+  // bytes responseMsg = 2;
+  void clear_responsemsg();
+  static const int kResponseMsgFieldNumber = 2;
+  const ::std::string& responsemsg() const;
+  void set_responsemsg(const ::std::string& value);
+  #if LANG_CXX11
+  void set_responsemsg(::std::string&& value);
+  #endif
+  void set_responsemsg(const char* value);
+  void set_responsemsg(const void* value, size_t size);
+  ::std::string* mutable_responsemsg();
+  ::std::string* release_responsemsg();
+  void set_allocated_responsemsg(::std::string* responsemsg);
+
+  // @@protoc_insertion_point(class_scope:ik_Proxy.ProxyResponse)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr type_;
+  ::google::protobuf::internal::ArenaStringPtr responsemsg_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ProxyServer_2eproto;
 };
@@ -196,82 +343,233 @@ class MsgRequest :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// MsgRequest
+// ProxyMessage
 
-// int32 id = 1;
-inline void MsgRequest::clear_id() {
-  id_ = 0;
+// bytes type = 1;
+inline void ProxyMessage::clear_type() {
+  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int32 MsgRequest::id() const {
-  // @@protoc_insertion_point(field_get:ik_ChatServer.MsgRequest.id)
-  return id_;
+inline const ::std::string& ProxyMessage::type() const {
+  // @@protoc_insertion_point(field_get:ik_Proxy.ProxyMessage.type)
+  return type_.GetNoArena();
 }
-inline void MsgRequest::set_id(::google::protobuf::int32 value) {
+inline void ProxyMessage::set_type(const ::std::string& value) {
   
-  id_ = value;
-  // @@protoc_insertion_point(field_set:ik_ChatServer.MsgRequest.id)
-}
-
-// bytes msg = 2;
-inline void MsgRequest::clear_msg() {
-  msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& MsgRequest::msg() const {
-  // @@protoc_insertion_point(field_get:ik_ChatServer.MsgRequest.msg)
-  return msg_.GetNoArena();
-}
-inline void MsgRequest::set_msg(const ::std::string& value) {
-  
-  msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:ik_ChatServer.MsgRequest.msg)
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:ik_Proxy.ProxyMessage.type)
 }
 #if LANG_CXX11
-inline void MsgRequest::set_msg(::std::string&& value) {
+inline void ProxyMessage::set_type(::std::string&& value) {
   
-  msg_.SetNoArena(
+  type_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:ik_ChatServer.MsgRequest.msg)
+  // @@protoc_insertion_point(field_set_rvalue:ik_Proxy.ProxyMessage.type)
 }
 #endif
-inline void MsgRequest::set_msg(const char* value) {
+inline void ProxyMessage::set_type(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:ik_ChatServer.MsgRequest.msg)
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ik_Proxy.ProxyMessage.type)
 }
-inline void MsgRequest::set_msg(const void* value, size_t size) {
+inline void ProxyMessage::set_type(const void* value, size_t size) {
   
-  msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:ik_ChatServer.MsgRequest.msg)
+  // @@protoc_insertion_point(field_set_pointer:ik_Proxy.ProxyMessage.type)
 }
-inline ::std::string* MsgRequest::mutable_msg() {
+inline ::std::string* ProxyMessage::mutable_type() {
   
-  // @@protoc_insertion_point(field_mutable:ik_ChatServer.MsgRequest.msg)
-  return msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:ik_Proxy.ProxyMessage.type)
+  return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* MsgRequest::release_msg() {
-  // @@protoc_insertion_point(field_release:ik_ChatServer.MsgRequest.msg)
+inline ::std::string* ProxyMessage::release_type() {
+  // @@protoc_insertion_point(field_release:ik_Proxy.ProxyMessage.type)
   
-  return msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void MsgRequest::set_allocated_msg(::std::string* msg) {
-  if (msg != nullptr) {
+inline void ProxyMessage::set_allocated_type(::std::string* type) {
+  if (type != nullptr) {
     
   } else {
     
   }
-  msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), msg);
-  // @@protoc_insertion_point(field_set_allocated:ik_ChatServer.MsgRequest.msg)
+  type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
+  // @@protoc_insertion_point(field_set_allocated:ik_Proxy.ProxyMessage.type)
+}
+
+// bytes requestMsg = 2;
+inline void ProxyMessage::clear_requestmsg() {
+  requestmsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProxyMessage::requestmsg() const {
+  // @@protoc_insertion_point(field_get:ik_Proxy.ProxyMessage.requestMsg)
+  return requestmsg_.GetNoArena();
+}
+inline void ProxyMessage::set_requestmsg(const ::std::string& value) {
+  
+  requestmsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:ik_Proxy.ProxyMessage.requestMsg)
+}
+#if LANG_CXX11
+inline void ProxyMessage::set_requestmsg(::std::string&& value) {
+  
+  requestmsg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:ik_Proxy.ProxyMessage.requestMsg)
+}
+#endif
+inline void ProxyMessage::set_requestmsg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  requestmsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ik_Proxy.ProxyMessage.requestMsg)
+}
+inline void ProxyMessage::set_requestmsg(const void* value, size_t size) {
+  
+  requestmsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:ik_Proxy.ProxyMessage.requestMsg)
+}
+inline ::std::string* ProxyMessage::mutable_requestmsg() {
+  
+  // @@protoc_insertion_point(field_mutable:ik_Proxy.ProxyMessage.requestMsg)
+  return requestmsg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProxyMessage::release_requestmsg() {
+  // @@protoc_insertion_point(field_release:ik_Proxy.ProxyMessage.requestMsg)
+  
+  return requestmsg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProxyMessage::set_allocated_requestmsg(::std::string* requestmsg) {
+  if (requestmsg != nullptr) {
+    
+  } else {
+    
+  }
+  requestmsg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), requestmsg);
+  // @@protoc_insertion_point(field_set_allocated:ik_Proxy.ProxyMessage.requestMsg)
+}
+
+// -------------------------------------------------------------------
+
+// ProxyResponse
+
+// bytes type = 1;
+inline void ProxyResponse::clear_type() {
+  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProxyResponse::type() const {
+  // @@protoc_insertion_point(field_get:ik_Proxy.ProxyResponse.type)
+  return type_.GetNoArena();
+}
+inline void ProxyResponse::set_type(const ::std::string& value) {
+  
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:ik_Proxy.ProxyResponse.type)
+}
+#if LANG_CXX11
+inline void ProxyResponse::set_type(::std::string&& value) {
+  
+  type_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:ik_Proxy.ProxyResponse.type)
+}
+#endif
+inline void ProxyResponse::set_type(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ik_Proxy.ProxyResponse.type)
+}
+inline void ProxyResponse::set_type(const void* value, size_t size) {
+  
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:ik_Proxy.ProxyResponse.type)
+}
+inline ::std::string* ProxyResponse::mutable_type() {
+  
+  // @@protoc_insertion_point(field_mutable:ik_Proxy.ProxyResponse.type)
+  return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProxyResponse::release_type() {
+  // @@protoc_insertion_point(field_release:ik_Proxy.ProxyResponse.type)
+  
+  return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProxyResponse::set_allocated_type(::std::string* type) {
+  if (type != nullptr) {
+    
+  } else {
+    
+  }
+  type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
+  // @@protoc_insertion_point(field_set_allocated:ik_Proxy.ProxyResponse.type)
+}
+
+// bytes responseMsg = 2;
+inline void ProxyResponse::clear_responsemsg() {
+  responsemsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProxyResponse::responsemsg() const {
+  // @@protoc_insertion_point(field_get:ik_Proxy.ProxyResponse.responseMsg)
+  return responsemsg_.GetNoArena();
+}
+inline void ProxyResponse::set_responsemsg(const ::std::string& value) {
+  
+  responsemsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:ik_Proxy.ProxyResponse.responseMsg)
+}
+#if LANG_CXX11
+inline void ProxyResponse::set_responsemsg(::std::string&& value) {
+  
+  responsemsg_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:ik_Proxy.ProxyResponse.responseMsg)
+}
+#endif
+inline void ProxyResponse::set_responsemsg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  responsemsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ik_Proxy.ProxyResponse.responseMsg)
+}
+inline void ProxyResponse::set_responsemsg(const void* value, size_t size) {
+  
+  responsemsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:ik_Proxy.ProxyResponse.responseMsg)
+}
+inline ::std::string* ProxyResponse::mutable_responsemsg() {
+  
+  // @@protoc_insertion_point(field_mutable:ik_Proxy.ProxyResponse.responseMsg)
+  return responsemsg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProxyResponse::release_responsemsg() {
+  // @@protoc_insertion_point(field_release:ik_Proxy.ProxyResponse.responseMsg)
+  
+  return responsemsg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProxyResponse::set_allocated_responsemsg(::std::string* responsemsg) {
+  if (responsemsg != nullptr) {
+    
+  } else {
+    
+  }
+  responsemsg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), responsemsg);
+  // @@protoc_insertion_point(field_set_allocated:ik_Proxy.ProxyResponse.responseMsg)
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace ik_ChatServer
+}  // namespace ik_Proxy
 
 // @@protoc_insertion_point(global_scope)
 

@@ -1,8 +1,13 @@
 syntax = "proto3";
 
-package ik_ChatServer;
+package ik_Proxy;
 
-message MsgRequest {
-    int32 id = 1;
-    bytes msg = 2;
+message ProxyMessage {
+    bytes type = 1;
+    bytes requestMsg = 2;
+}
+
+message ProxyResponse {
+    bytes type = 1;
+    bytes responseMsg = 2;
 }
