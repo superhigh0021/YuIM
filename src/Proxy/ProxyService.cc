@@ -310,3 +310,62 @@ void ProxyService::chatMsg(const muduo::net::TcpConnectionPtr& conn, std::string
         it->second->send(recvBuf);
     }
 }
+
+// 获得消息对应的处理器
+MsgHandler ProxyService::getHandler(std::string msgType) {
+    // 记录错误日志，msgid没有对应的事件处理回调
+    if (auto it = msgHandlerMap_.find(msgType); it == msgHandlerMap_.end()) {
+        // 返回一个默认处理器
+        ik::LogRequest request;
+        request.set_name("ProxyService");
+        request.set_msg("have this service" + msgType);
+        google::protobuf::Empty emp;
+        logStub_.Log_ERROR(nullptr, &request, &emp, nullptr);
+
+        return [](const muduo::net::TcpConnectionPtr& conn, std::string& recvBuf, muduo::Timestamp time) {};
+    } else {
+        return msgHandlerMap_[msgType];
+    }
+}
+
+// 处理客户端异常退出
+void ProxyService::clientCloseException(const muduo::net::TcpConnectionPtr& conn) {
+    // 删除usermap->用户改为offline->线程安全->删除redis上的信息
+    std::lock_guard lock(mutex_);
+    for (auto it = userConnectionMap_.begin(); it != userConnectionMap_.end(); ++it) {
+        if (it->second == conn) {
+            redisClient_.delHost(it->first);
+            it = userConnectionMap_.erase(it);
+            break;
+        }
+    }
+}
+
+// 服务器异常、业务重置
+void ProxyService::reset() {
+    // 序列化客户端收到的语句
+    ik_Proxy::ProxyResponse response;
+    response.set_type("LoginOut");
+    response.set_responsemsg("server crash");
+    std::string sendStr = response.SerializeAsString();
+
+    {
+        std::lock_guard lock(mutex_);
+        // 重置用户为下线状态
+        ik_UserService::LoginOutRequest request;
+        for (auto it = userConnectionMap_.begin(); it != userConnectionMap_.end(); ++it) {
+            request.set_id(it->first);
+
+            // 在redis上删除用户
+            redisClient_.delHost(it->first);
+
+            google::protobuf::Empty emp;
+            userStub_.LoginOut(nullptr, &request, &emp, nullptr);
+
+            it->second->send(sendStr);
+        }
+    }
+
+    // 清空map
+    std::unordered_map<int, muduo::net::TcpConnectionPtr>().swap(userConnectionMap_);
+}
