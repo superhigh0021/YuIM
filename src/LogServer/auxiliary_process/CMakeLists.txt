@@ -6,6 +6,7 @@ add_executable(LogSend ${SRC_LIST})
 set(EXECUTABLE_OUTPUT_PATH ../../../../bin/LogServer/auxiliary_process)
 
 include_directories(../../../include/LogServer/auxiliary_process)
+include_directories(../../../include/LogServer/protoFile)
 
 # target_link_libraries(LogSend protobuf muduo_net muduo_base pthread)
 target_link_libraries(LogSend myrpc protobuf muduo_net muduo_base pthread)

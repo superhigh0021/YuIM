@@ -9,6 +9,7 @@ set(EXECUTABLE_OUTPUT_PATH ../../../bin/LogServer)
 # 这个可以在cmake25.1版本使用，很方便
 # include_directories(${PARENT_DIRECTORY}/include/LogServer)
 include_directories(../../include/LogServer)
+include_directories(../../include/LogServer/protoFile)
 
 aux_source_directory(. SERVER_SRC)
 
