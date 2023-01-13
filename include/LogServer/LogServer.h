@@ -6,7 +6,7 @@
 
 #include <google/protobuf/service.h>
 
-#define INPUT_SIZE 128
+constexpr int INPUT_SIZE = 128;
 
 class LogServer : public ik::LogServerRpc {
 public:

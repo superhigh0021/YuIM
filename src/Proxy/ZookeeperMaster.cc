@@ -6,7 +6,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-#define BUFF_SIZE 128
+constexpr int BUFF_SIZE = 128;
 
 // zk_init 函数的异步回调函数，全局的watcher观察器，handler表示zkserver给zkclient的通知
 void init_watcher(zhandle_t* handler, int type, int state, const char* path, void* watcher_context) {

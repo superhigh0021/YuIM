@@ -6,7 +6,7 @@
 #include <cstring>
 #include <iostream>
 
-#define SEND_SIZE 256
+constexpr int  SEND_SIZE = 256;
 
 // 开始服务
 void LogSend::run(std::string ip, uint16_t port) {
@@ -50,7 +50,7 @@ void LogSend::sendFile(const muduo::net::TcpConnectionPtr& conn, muduo::net::Buf
 
         std::string sendStr;
         response.SerializePartialToString(&sendStr);
-        conn->send(sendStr.c_str(), sendStr.size());
+        conn->send(sendStr.c_str(), strlen(sendStr.c_str()));
     }
 
     response.set_serial(count++);
@@ -58,7 +58,7 @@ void LogSend::sendFile(const muduo::net::TcpConnectionPtr& conn, muduo::net::Buf
 
     std::string sendStr;
     response.SerializePartialToString(&sendStr);
-    conn->send(sendStr.c_str(), sendStr.size());
+    conn->send(sendStr.c_str(), strlen(sendStr.c_str()));
 }
 
 // 关闭连接

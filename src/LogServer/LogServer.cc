@@ -8,8 +8,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-#define BUF_SIZE 32
-#define FILE_SIZE 64
+constexpr int BUF_SIZE = 32;
+constexpr int FILE_SIZE = 64;
 
 // 打印INFO日志
 void LogServer::Log_INFO(const char* filePath, std::string&& msg) {
