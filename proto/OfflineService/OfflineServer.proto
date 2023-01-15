@@ -7,7 +7,7 @@ message Request {
     bytes requestMsg = 2;
 }
 
-message WriteOffllineRequest {
+message WriteOfflineRequest {
     int32 friend_id = 1;
     bytes msg = 2;
 }
