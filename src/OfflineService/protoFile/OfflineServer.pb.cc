@@ -21,10 +21,10 @@ class RequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Request> _instance;
 } _Request_default_instance_;
-class WriteOffllineRequestDefaultTypeInternal {
+class WriteOfflineRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<WriteOffllineRequest> _instance;
-} _WriteOffllineRequest_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<WriteOfflineRequest> _instance;
+} _WriteOfflineRequest_default_instance_;
 class ReadOfflineRequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ReadOfflineRequest> _instance;
@@ -48,19 +48,19 @@ static void InitDefaultsRequest_OfflineServer_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_Request_OfflineServer_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRequest_OfflineServer_2eproto}, {}};
 
-static void InitDefaultsWriteOffllineRequest_OfflineServer_2eproto() {
+static void InitDefaultsWriteOfflineRequest_OfflineServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ik_OfflineServer::_WriteOffllineRequest_default_instance_;
-    new (ptr) ::ik_OfflineServer::WriteOffllineRequest();
+    void* ptr = &::ik_OfflineServer::_WriteOfflineRequest_default_instance_;
+    new (ptr) ::ik_OfflineServer::WriteOfflineRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ik_OfflineServer::WriteOffllineRequest::InitAsDefaultInstance();
+  ::ik_OfflineServer::WriteOfflineRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_WriteOffllineRequest_OfflineServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsWriteOffllineRequest_OfflineServer_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_WriteOfflineRequest_OfflineServer_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsWriteOfflineRequest_OfflineServer_2eproto}, {}};
 
 static void InitDefaultsReadOfflineRequest_OfflineServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -92,7 +92,7 @@ static void InitDefaultsReadOfflineResponse_OfflineServer_2eproto() {
 
 void InitDefaults_OfflineServer_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Request_OfflineServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_WriteOffllineRequest_OfflineServer_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_WriteOfflineRequest_OfflineServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_ReadOfflineRequest_OfflineServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_ReadOfflineResponse_OfflineServer_2eproto.base);
 }
@@ -110,12 +110,12 @@ const ::google::protobuf::uint32 TableStruct_OfflineServer_2eproto::offsets[] PR
   PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::Request, type_),
   PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::Request, requestmsg_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::WriteOffllineRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::WriteOfflineRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::WriteOffllineRequest, friend_id_),
-  PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::WriteOffllineRequest, msg_),
+  PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::WriteOfflineRequest, friend_id_),
+  PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::WriteOfflineRequest, msg_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::ik_OfflineServer::ReadOfflineRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -131,14 +131,14 @@ const ::google::protobuf::uint32 TableStruct_OfflineServer_2eproto::offsets[] PR
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ik_OfflineServer::Request)},
-  { 7, -1, sizeof(::ik_OfflineServer::WriteOffllineRequest)},
+  { 7, -1, sizeof(::ik_OfflineServer::WriteOfflineRequest)},
   { 14, -1, sizeof(::ik_OfflineServer::ReadOfflineRequest)},
   { 20, -1, sizeof(::ik_OfflineServer::ReadOfflineResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_OfflineServer::_Request_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_OfflineServer::_WriteOffllineRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_OfflineServer::_WriteOfflineRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_OfflineServer::_ReadOfflineRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_OfflineServer::_ReadOfflineResponse_default_instance_),
 };
@@ -152,15 +152,15 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 const char descriptor_table_protodef_OfflineServer_2eproto[] =
   "\n\023OfflineServer.proto\022\020ik_OfflineServer\""
   "+\n\007Request\022\014\n\004type\030\001 \001(\014\022\022\n\nrequestMsg\030\002"
-  " \001(\014\"6\n\024WriteOffllineRequest\022\021\n\tfriend_i"
-  "d\030\001 \001(\005\022\013\n\003msg\030\002 \001(\014\"\"\n\022ReadOfflineReque"
-  "st\022\014\n\004myid\030\001 \001(\005\"\"\n\023ReadOfflineResponse\022"
-  "\013\n\003msg\030\001 \003(\014b\006proto3"
+  " \001(\014\"5\n\023WriteOfflineRequest\022\021\n\tfriend_id"
+  "\030\001 \001(\005\022\013\n\003msg\030\002 \001(\014\"\"\n\022ReadOfflineReques"
+  "t\022\014\n\004myid\030\001 \001(\005\"\"\n\023ReadOfflineResponse\022\013"
+  "\n\003msg\030\001 \003(\014b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_OfflineServer_2eproto = {
   false, InitDefaults_OfflineServer_2eproto, 
   descriptor_table_protodef_OfflineServer_2eproto,
-  "OfflineServer.proto", &assign_descriptors_table_OfflineServer_2eproto, 220,
+  "OfflineServer.proto", &assign_descriptors_table_OfflineServer_2eproto, 219,
 };
 
 void AddDescriptors_OfflineServer_2eproto() {
@@ -520,23 +520,23 @@ void Request::InternalSwap(Request* other) {
 
 // ===================================================================
 
-void WriteOffllineRequest::InitAsDefaultInstance() {
+void WriteOfflineRequest::InitAsDefaultInstance() {
 }
-class WriteOffllineRequest::HasBitSetters {
+class WriteOfflineRequest::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int WriteOffllineRequest::kFriendIdFieldNumber;
-const int WriteOffllineRequest::kMsgFieldNumber;
+const int WriteOfflineRequest::kFriendIdFieldNumber;
+const int WriteOfflineRequest::kMsgFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-WriteOffllineRequest::WriteOffllineRequest()
+WriteOfflineRequest::WriteOfflineRequest()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(constructor:ik_OfflineServer.WriteOfflineRequest)
 }
-WriteOffllineRequest::WriteOffllineRequest(const WriteOffllineRequest& from)
+WriteOfflineRequest::WriteOfflineRequest(const WriteOfflineRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
@@ -545,36 +545,36 @@ WriteOffllineRequest::WriteOffllineRequest(const WriteOffllineRequest& from)
     msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.msg_);
   }
   friend_id_ = from.friend_id_;
-  // @@protoc_insertion_point(copy_constructor:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(copy_constructor:ik_OfflineServer.WriteOfflineRequest)
 }
 
-void WriteOffllineRequest::SharedCtor() {
+void WriteOfflineRequest::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
-      &scc_info_WriteOffllineRequest_OfflineServer_2eproto.base);
+      &scc_info_WriteOfflineRequest_OfflineServer_2eproto.base);
   msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   friend_id_ = 0;
 }
 
-WriteOffllineRequest::~WriteOffllineRequest() {
-  // @@protoc_insertion_point(destructor:ik_OfflineServer.WriteOffllineRequest)
+WriteOfflineRequest::~WriteOfflineRequest() {
+  // @@protoc_insertion_point(destructor:ik_OfflineServer.WriteOfflineRequest)
   SharedDtor();
 }
 
-void WriteOffllineRequest::SharedDtor() {
+void WriteOfflineRequest::SharedDtor() {
   msg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void WriteOffllineRequest::SetCachedSize(int size) const {
+void WriteOfflineRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const WriteOffllineRequest& WriteOffllineRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_WriteOffllineRequest_OfflineServer_2eproto.base);
+const WriteOfflineRequest& WriteOfflineRequest::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_WriteOfflineRequest_OfflineServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void WriteOffllineRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:ik_OfflineServer.WriteOffllineRequest)
+void WriteOfflineRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:ik_OfflineServer.WriteOfflineRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -585,9 +585,9 @@ void WriteOffllineRequest::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* WriteOffllineRequest::_InternalParse(const char* begin, const char* end, void* object,
+const char* WriteOfflineRequest::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<WriteOffllineRequest*>(object);
+  auto msg = static_cast<WriteOfflineRequest*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -643,11 +643,11 @@ len_delim_till_end:
                                {parser_till_end, object}, size);
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool WriteOffllineRequest::MergePartialFromCodedStream(
+bool WriteOfflineRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(parse_start:ik_OfflineServer.WriteOfflineRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -689,18 +689,18 @@ bool WriteOffllineRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(parse_success:ik_OfflineServer.WriteOfflineRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(parse_failure:ik_OfflineServer.WriteOfflineRequest)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void WriteOffllineRequest::SerializeWithCachedSizes(
+void WriteOfflineRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(serialize_start:ik_OfflineServer.WriteOfflineRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -719,12 +719,12 @@ void WriteOffllineRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(serialize_end:ik_OfflineServer.WriteOfflineRequest)
 }
 
-::google::protobuf::uint8* WriteOffllineRequest::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* WriteOfflineRequest::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:ik_OfflineServer.WriteOfflineRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -744,12 +744,12 @@ void WriteOffllineRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:ik_OfflineServer.WriteOfflineRequest)
   return target;
 }
 
-size_t WriteOffllineRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ik_OfflineServer.WriteOffllineRequest)
+size_t WriteOfflineRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ik_OfflineServer.WriteOfflineRequest)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -780,23 +780,23 @@ size_t WriteOffllineRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void WriteOffllineRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ik_OfflineServer.WriteOffllineRequest)
+void WriteOfflineRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ik_OfflineServer.WriteOfflineRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const WriteOffllineRequest* source =
-      ::google::protobuf::DynamicCastToGenerated<WriteOffllineRequest>(
+  const WriteOfflineRequest* source =
+      ::google::protobuf::DynamicCastToGenerated<WriteOfflineRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_OfflineServer.WriteOfflineRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_OfflineServer.WriteOffllineRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_OfflineServer.WriteOfflineRequest)
     MergeFrom(*source);
   }
 }
 
-void WriteOffllineRequest::MergeFrom(const WriteOffllineRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ik_OfflineServer.WriteOffllineRequest)
+void WriteOfflineRequest::MergeFrom(const WriteOfflineRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ik_OfflineServer.WriteOfflineRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -811,29 +811,29 @@ void WriteOffllineRequest::MergeFrom(const WriteOffllineRequest& from) {
   }
 }
 
-void WriteOffllineRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ik_OfflineServer.WriteOffllineRequest)
+void WriteOfflineRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ik_OfflineServer.WriteOfflineRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void WriteOffllineRequest::CopyFrom(const WriteOffllineRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ik_OfflineServer.WriteOffllineRequest)
+void WriteOfflineRequest::CopyFrom(const WriteOfflineRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ik_OfflineServer.WriteOfflineRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WriteOffllineRequest::IsInitialized() const {
+bool WriteOfflineRequest::IsInitialized() const {
   return true;
 }
 
-void WriteOffllineRequest::Swap(WriteOffllineRequest* other) {
+void WriteOfflineRequest::Swap(WriteOfflineRequest* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void WriteOffllineRequest::InternalSwap(WriteOffllineRequest* other) {
+void WriteOfflineRequest::InternalSwap(WriteOfflineRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   msg_.Swap(&other->msg_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
@@ -841,7 +841,7 @@ void WriteOffllineRequest::InternalSwap(WriteOffllineRequest* other) {
   swap(friend_id_, other->friend_id_);
 }
 
-::google::protobuf::Metadata WriteOffllineRequest::GetMetadata() const {
+::google::protobuf::Metadata WriteOfflineRequest::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_OfflineServer_2eproto);
   return ::file_level_metadata_OfflineServer_2eproto[kIndexInFileMessages];
 }
@@ -1392,8 +1392,8 @@ namespace protobuf {
 template<> PROTOBUF_NOINLINE ::ik_OfflineServer::Request* Arena::CreateMaybeMessage< ::ik_OfflineServer::Request >(Arena* arena) {
   return Arena::CreateInternal< ::ik_OfflineServer::Request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ik_OfflineServer::WriteOffllineRequest* Arena::CreateMaybeMessage< ::ik_OfflineServer::WriteOffllineRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::ik_OfflineServer::WriteOffllineRequest >(arena);
+template<> PROTOBUF_NOINLINE ::ik_OfflineServer::WriteOfflineRequest* Arena::CreateMaybeMessage< ::ik_OfflineServer::WriteOfflineRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::ik_OfflineServer::WriteOfflineRequest >(arena);
 }
 template<> PROTOBUF_NOINLINE ::ik_OfflineServer::ReadOfflineRequest* Arena::CreateMaybeMessage< ::ik_OfflineServer::ReadOfflineRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ik_OfflineServer::ReadOfflineRequest >(arena);
