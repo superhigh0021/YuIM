@@ -14,8 +14,9 @@ include_directories(../../include/OfflineService/protoFile)
 aux_source_directory(. SRC_LIST)
 
 # 指定生成可执行文件
-add_executable(UserService ${SRC_LIST})
+add_executable(OfflineService ${SRC_LIST})
 
-# add_subdirectory(offlineServer)
+add_subdirectory(OfflineServer)
+add_subdirectory(protoFile)
 
-target_link_libraries(ProxyServer protobuf offline_proto myrpc zookeeper_mt hiredis muduo_net muduo_base pthread)
+target_link_libraries(OfflineService protobuf offline_proto myrpc zookeeper_mt hiredis muduo_net muduo_base pthread)
