@@ -14,7 +14,7 @@ include_directories(../../include/OfflineService/protoFile)
 aux_source_directory(. SRC_LIST)
 
 # 指定生成可执行文件
-add_executable(OfflineService ${SRC_LIST})
+add_executable(offlineService ${SRC_LIST})
 
 add_subdirectory(OfflineServer)
 add_subdirectory(protoFile)
