@@ -17,7 +17,7 @@ message CreateGroupRequest {
     bytes groupname = 2;
 }
 
-message CrateGroupResponse {
+message CreateGroupResponse {
     int32 groupid = 1;
 }
 
