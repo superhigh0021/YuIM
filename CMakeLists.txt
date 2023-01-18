@@ -1,6 +1,6 @@
 # add_subdirectory(src/ChatService)
 # add_subdirectory(src/FriendService)
-# add_subdirectory(src/GroupService)
+add_subdirectory(src/GroupService)
 add_subdirectory(src/LogServer)
 add_subdirectory(src/OfflineService)
 add_subdirectory(src/Proxy)
