@@ -52,12 +52,12 @@ namespace ik_GroupServer {
 class AddGroupRequest;
 class AddGroupRequestDefaultTypeInternal;
 extern AddGroupRequestDefaultTypeInternal _AddGroupRequest_default_instance_;
-class CrateGroupResponse;
-class CrateGroupResponseDefaultTypeInternal;
-extern CrateGroupResponseDefaultTypeInternal _CrateGroupResponse_default_instance_;
 class CreateGroupRequest;
 class CreateGroupRequestDefaultTypeInternal;
 extern CreateGroupRequestDefaultTypeInternal _CreateGroupRequest_default_instance_;
+class CreateGroupResponse;
+class CreateGroupResponseDefaultTypeInternal;
+extern CreateGroupResponseDefaultTypeInternal _CreateGroupResponse_default_instance_;
 class GetGroupUsersRequest;
 class GetGroupUsersRequestDefaultTypeInternal;
 extern GetGroupUsersRequestDefaultTypeInternal _GetGroupUsersRequest_default_instance_;
@@ -77,8 +77,8 @@ extern UserInfoDefaultTypeInternal _UserInfo_default_instance_;
 namespace google {
 namespace protobuf {
 template<> ::ik_GroupServer::AddGroupRequest* Arena::CreateMaybeMessage<::ik_GroupServer::AddGroupRequest>(Arena*);
-template<> ::ik_GroupServer::CrateGroupResponse* Arena::CreateMaybeMessage<::ik_GroupServer::CrateGroupResponse>(Arena*);
 template<> ::ik_GroupServer::CreateGroupRequest* Arena::CreateMaybeMessage<::ik_GroupServer::CreateGroupRequest>(Arena*);
+template<> ::ik_GroupServer::CreateGroupResponse* Arena::CreateMaybeMessage<::ik_GroupServer::CreateGroupResponse>(Arena*);
 template<> ::ik_GroupServer::GetGroupUsersRequest* Arena::CreateMaybeMessage<::ik_GroupServer::GetGroupUsersRequest>(Arena*);
 template<> ::ik_GroupServer::GetGroupUsersResponse* Arena::CreateMaybeMessage<::ik_GroupServer::GetGroupUsersResponse>(Arena*);
 template<> ::ik_GroupServer::QuitGroupRequest* Arena::CreateMaybeMessage<::ik_GroupServer::QuitGroupRequest>(Arena*);
@@ -471,25 +471,25 @@ class CreateGroupRequest :
 };
 // -------------------------------------------------------------------
 
-class CrateGroupResponse :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_GroupServer.CrateGroupResponse) */ {
+class CreateGroupResponse :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:ik_GroupServer.CreateGroupResponse) */ {
  public:
-  CrateGroupResponse();
-  virtual ~CrateGroupResponse();
+  CreateGroupResponse();
+  virtual ~CreateGroupResponse();
 
-  CrateGroupResponse(const CrateGroupResponse& from);
+  CreateGroupResponse(const CreateGroupResponse& from);
 
-  inline CrateGroupResponse& operator=(const CrateGroupResponse& from) {
+  inline CreateGroupResponse& operator=(const CreateGroupResponse& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  CrateGroupResponse(CrateGroupResponse&& from) noexcept
-    : CrateGroupResponse() {
+  CreateGroupResponse(CreateGroupResponse&& from) noexcept
+    : CreateGroupResponse() {
     *this = ::std::move(from);
   }
 
-  inline CrateGroupResponse& operator=(CrateGroupResponse&& from) noexcept {
+  inline CreateGroupResponse& operator=(CreateGroupResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -501,34 +501,34 @@ class CrateGroupResponse :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const CrateGroupResponse& default_instance();
+  static const CreateGroupResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const CrateGroupResponse* internal_default_instance() {
-    return reinterpret_cast<const CrateGroupResponse*>(
-               &_CrateGroupResponse_default_instance_);
+  static inline const CreateGroupResponse* internal_default_instance() {
+    return reinterpret_cast<const CreateGroupResponse*>(
+               &_CreateGroupResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  void Swap(CrateGroupResponse* other);
-  friend void swap(CrateGroupResponse& a, CrateGroupResponse& b) {
+  void Swap(CreateGroupResponse* other);
+  friend void swap(CreateGroupResponse& a, CreateGroupResponse& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline CrateGroupResponse* New() const final {
-    return CreateMaybeMessage<CrateGroupResponse>(nullptr);
+  inline CreateGroupResponse* New() const final {
+    return CreateMaybeMessage<CreateGroupResponse>(nullptr);
   }
 
-  CrateGroupResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<CrateGroupResponse>(arena);
+  CreateGroupResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CreateGroupResponse>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const CrateGroupResponse& from);
-  void MergeFrom(const CrateGroupResponse& from);
+  void CopyFrom(const CreateGroupResponse& from);
+  void MergeFrom(const CreateGroupResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -550,7 +550,7 @@ class CrateGroupResponse :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(CrateGroupResponse* other);
+  void InternalSwap(CreateGroupResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -572,7 +572,7 @@ class CrateGroupResponse :
   ::google::protobuf::int32 groupid() const;
   void set_groupid(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(class_scope:ik_GroupServer.CreateGroupResponse)
  private:
   class HasBitSetters;
 
@@ -1279,20 +1279,20 @@ inline void CreateGroupRequest::set_allocated_groupname(::std::string* groupname
 
 // -------------------------------------------------------------------
 
-// CrateGroupResponse
+// CreateGroupResponse
 
 // int32 groupid = 1;
-inline void CrateGroupResponse::clear_groupid() {
+inline void CreateGroupResponse::clear_groupid() {
   groupid_ = 0;
 }
-inline ::google::protobuf::int32 CrateGroupResponse::groupid() const {
-  // @@protoc_insertion_point(field_get:ik_GroupServer.CrateGroupResponse.groupid)
+inline ::google::protobuf::int32 CreateGroupResponse::groupid() const {
+  // @@protoc_insertion_point(field_get:ik_GroupServer.CreateGroupResponse.groupid)
   return groupid_;
 }
-inline void CrateGroupResponse::set_groupid(::google::protobuf::int32 value) {
+inline void CreateGroupResponse::set_groupid(::google::protobuf::int32 value) {
   
   groupid_ = value;
-  // @@protoc_insertion_point(field_set:ik_GroupServer.CrateGroupResponse.groupid)
+  // @@protoc_insertion_point(field_set:ik_GroupServer.CreateGroupResponse.groupid)
 }
 
 // -------------------------------------------------------------------
