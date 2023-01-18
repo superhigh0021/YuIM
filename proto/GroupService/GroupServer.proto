@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package ik_GroupServer;
+
+message Request {
+    bytes type = 1;
+    bytes request_msg = 2;
+}
+
+message AddGroupRequest {
+    int32 userid = 1;
+    int32 groupid = 2;
+}
+
+message CreateGroupRequest {
+    int32 userid = 1;
+    bytes groupname = 2;
+}
+
+message CrateGroupResponse {
+    int32 groupid = 1;
+}
+
+message QuitGroupRequest {
+    int32 userid = 1;
+    int32 groupid = 2;
+}
+
+message GetGroupUsersRequest {
+    int32 groupid = 1;
+}
+
+message UserInfo {
+    int32 id = 1;
+    bytes name = 2;    
+}
+
+message GetGroupUsersResponse {
+    repeated UserInfo users = 1;
+}
