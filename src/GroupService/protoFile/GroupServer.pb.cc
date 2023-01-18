@@ -30,10 +30,10 @@ class CreateGroupRequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<CreateGroupRequest> _instance;
 } _CreateGroupRequest_default_instance_;
-class CrateGroupResponseDefaultTypeInternal {
+class CreateGroupResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CrateGroupResponse> _instance;
-} _CrateGroupResponse_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<CreateGroupResponse> _instance;
+} _CreateGroupResponse_default_instance_;
 class QuitGroupRequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<QuitGroupRequest> _instance;
@@ -93,19 +93,19 @@ static void InitDefaultsCreateGroupRequest_GroupServer_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_CreateGroupRequest_GroupServer_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCreateGroupRequest_GroupServer_2eproto}, {}};
 
-static void InitDefaultsCrateGroupResponse_GroupServer_2eproto() {
+static void InitDefaultsCreateGroupResponse_GroupServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ik_GroupServer::_CrateGroupResponse_default_instance_;
-    new (ptr) ::ik_GroupServer::CrateGroupResponse();
+    void* ptr = &::ik_GroupServer::_CreateGroupResponse_default_instance_;
+    new (ptr) ::ik_GroupServer::CreateGroupResponse();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ik_GroupServer::CrateGroupResponse::InitAsDefaultInstance();
+  ::ik_GroupServer::CreateGroupResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_CrateGroupResponse_GroupServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCrateGroupResponse_GroupServer_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_CreateGroupResponse_GroupServer_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCreateGroupResponse_GroupServer_2eproto}, {}};
 
 static void InitDefaultsQuitGroupRequest_GroupServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -168,7 +168,7 @@ void InitDefaults_GroupServer_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Request_GroupServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_AddGroupRequest_GroupServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_CreateGroupRequest_GroupServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CrateGroupResponse_GroupServer_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CreateGroupResponse_GroupServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_QuitGroupRequest_GroupServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_GetGroupUsersRequest_GroupServer_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_UserInfo_GroupServer_2eproto.base);
@@ -202,11 +202,11 @@ const ::google::protobuf::uint32 TableStruct_GroupServer_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::ik_GroupServer::CreateGroupRequest, userid_),
   PROTOBUF_FIELD_OFFSET(::ik_GroupServer::CreateGroupRequest, groupname_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ik_GroupServer::CrateGroupResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ik_GroupServer::CreateGroupResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ik_GroupServer::CrateGroupResponse, groupid_),
+  PROTOBUF_FIELD_OFFSET(::ik_GroupServer::CreateGroupResponse, groupid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::ik_GroupServer::QuitGroupRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -238,7 +238,7 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 0, -1, sizeof(::ik_GroupServer::Request)},
   { 7, -1, sizeof(::ik_GroupServer::AddGroupRequest)},
   { 14, -1, sizeof(::ik_GroupServer::CreateGroupRequest)},
-  { 21, -1, sizeof(::ik_GroupServer::CrateGroupResponse)},
+  { 21, -1, sizeof(::ik_GroupServer::CreateGroupResponse)},
   { 27, -1, sizeof(::ik_GroupServer::QuitGroupRequest)},
   { 34, -1, sizeof(::ik_GroupServer::GetGroupUsersRequest)},
   { 40, -1, sizeof(::ik_GroupServer::UserInfo)},
@@ -249,7 +249,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_Request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_AddGroupRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_CreateGroupRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_CrateGroupResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_CreateGroupResponse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_QuitGroupRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_GetGroupUsersRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::ik_GroupServer::_UserInfo_default_instance_),
@@ -267,18 +267,18 @@ const char descriptor_table_protodef_GroupServer_2eproto[] =
   "equest\022\014\n\004type\030\001 \001(\014\022\023\n\013request_msg\030\002 \001("
   "\014\"2\n\017AddGroupRequest\022\016\n\006userid\030\001 \001(\005\022\017\n\007"
   "groupid\030\002 \001(\005\"7\n\022CreateGroupRequest\022\016\n\006u"
-  "serid\030\001 \001(\005\022\021\n\tgroupname\030\002 \001(\014\"%\n\022CrateG"
-  "roupResponse\022\017\n\007groupid\030\001 \001(\005\"3\n\020QuitGro"
-  "upRequest\022\016\n\006userid\030\001 \001(\005\022\017\n\007groupid\030\002 \001"
-  "(\005\"\'\n\024GetGroupUsersRequest\022\017\n\007groupid\030\001 "
-  "\001(\005\"$\n\010UserInfo\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001("
-  "\014\"@\n\025GetGroupUsersResponse\022\'\n\005users\030\001 \003("
-  "\0132\030.ik_GroupServer.UserInfob\006proto3"
+  "serid\030\001 \001(\005\022\021\n\tgroupname\030\002 \001(\014\"&\n\023Create"
+  "GroupResponse\022\017\n\007groupid\030\001 \001(\005\"3\n\020QuitGr"
+  "oupRequest\022\016\n\006userid\030\001 \001(\005\022\017\n\007groupid\030\002 "
+  "\001(\005\"\'\n\024GetGroupUsersRequest\022\017\n\007groupid\030\001"
+  " \001(\005\"$\n\010UserInfo\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001"
+  "(\014\"@\n\025GetGroupUsersResponse\022\'\n\005users\030\001 \003"
+  "(\0132\030.ik_GroupServer.UserInfob\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_GroupServer_2eproto = {
   false, InitDefaults_GroupServer_2eproto, 
   descriptor_table_protodef_GroupServer_2eproto,
-  "GroupServer.proto", &assign_descriptors_table_GroupServer_2eproto, 435,
+  "GroupServer.proto", &assign_descriptors_table_GroupServer_2eproto, 436,
 };
 
 void AddDescriptors_GroupServer_2eproto() {
@@ -1275,52 +1275,52 @@ void CreateGroupRequest::InternalSwap(CreateGroupRequest* other) {
 
 // ===================================================================
 
-void CrateGroupResponse::InitAsDefaultInstance() {
+void CreateGroupResponse::InitAsDefaultInstance() {
 }
-class CrateGroupResponse::HasBitSetters {
+class CreateGroupResponse::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CrateGroupResponse::kGroupidFieldNumber;
+const int CreateGroupResponse::kGroupidFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-CrateGroupResponse::CrateGroupResponse()
+CreateGroupResponse::CreateGroupResponse()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(constructor:ik_GroupServer.CreateGroupResponse)
 }
-CrateGroupResponse::CrateGroupResponse(const CrateGroupResponse& from)
+CreateGroupResponse::CreateGroupResponse(const CreateGroupResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   groupid_ = from.groupid_;
-  // @@protoc_insertion_point(copy_constructor:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(copy_constructor:ik_GroupServer.CreateGroupResponse)
 }
 
-void CrateGroupResponse::SharedCtor() {
+void CreateGroupResponse::SharedCtor() {
   groupid_ = 0;
 }
 
-CrateGroupResponse::~CrateGroupResponse() {
-  // @@protoc_insertion_point(destructor:ik_GroupServer.CrateGroupResponse)
+CreateGroupResponse::~CreateGroupResponse() {
+  // @@protoc_insertion_point(destructor:ik_GroupServer.CreateGroupResponse)
   SharedDtor();
 }
 
-void CrateGroupResponse::SharedDtor() {
+void CreateGroupResponse::SharedDtor() {
 }
 
-void CrateGroupResponse::SetCachedSize(int size) const {
+void CreateGroupResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CrateGroupResponse& CrateGroupResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CrateGroupResponse_GroupServer_2eproto.base);
+const CreateGroupResponse& CreateGroupResponse::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_CreateGroupResponse_GroupServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void CrateGroupResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:ik_GroupServer.CrateGroupResponse)
+void CreateGroupResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:ik_GroupServer.CreateGroupResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1330,9 +1330,9 @@ void CrateGroupResponse::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CrateGroupResponse::_InternalParse(const char* begin, const char* end, void* object,
+const char* CreateGroupResponse::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<CrateGroupResponse*>(object);
+  auto msg = static_cast<CreateGroupResponse*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -1366,11 +1366,11 @@ const char* CrateGroupResponse::_InternalParse(const char* begin, const char* en
   return ptr;
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool CrateGroupResponse::MergePartialFromCodedStream(
+bool CreateGroupResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(parse_start:ik_GroupServer.CreateGroupResponse)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -1401,18 +1401,18 @@ bool CrateGroupResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(parse_success:ik_GroupServer.CreateGroupResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(parse_failure:ik_GroupServer.CreateGroupResponse)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void CrateGroupResponse::SerializeWithCachedSizes(
+void CreateGroupResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(serialize_start:ik_GroupServer.CreateGroupResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1425,12 +1425,12 @@ void CrateGroupResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(serialize_end:ik_GroupServer.CreateGroupResponse)
 }
 
-::google::protobuf::uint8* CrateGroupResponse::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* CreateGroupResponse::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:ik_GroupServer.CreateGroupResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1443,12 +1443,12 @@ void CrateGroupResponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:ik_GroupServer.CreateGroupResponse)
   return target;
 }
 
-size_t CrateGroupResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ik_GroupServer.CrateGroupResponse)
+size_t CreateGroupResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ik_GroupServer.CreateGroupResponse)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1472,23 +1472,23 @@ size_t CrateGroupResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void CrateGroupResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ik_GroupServer.CrateGroupResponse)
+void CreateGroupResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ik_GroupServer.CreateGroupResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  const CrateGroupResponse* source =
-      ::google::protobuf::DynamicCastToGenerated<CrateGroupResponse>(
+  const CreateGroupResponse* source =
+      ::google::protobuf::DynamicCastToGenerated<CreateGroupResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ik_GroupServer.CreateGroupResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_GroupServer.CrateGroupResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ik_GroupServer.CreateGroupResponse)
     MergeFrom(*source);
   }
 }
 
-void CrateGroupResponse::MergeFrom(const CrateGroupResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ik_GroupServer.CrateGroupResponse)
+void CreateGroupResponse::MergeFrom(const CreateGroupResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ik_GroupServer.CreateGroupResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1499,35 +1499,35 @@ void CrateGroupResponse::MergeFrom(const CrateGroupResponse& from) {
   }
 }
 
-void CrateGroupResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ik_GroupServer.CrateGroupResponse)
+void CreateGroupResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ik_GroupServer.CreateGroupResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void CrateGroupResponse::CopyFrom(const CrateGroupResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ik_GroupServer.CrateGroupResponse)
+void CreateGroupResponse::CopyFrom(const CreateGroupResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ik_GroupServer.CreateGroupResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CrateGroupResponse::IsInitialized() const {
+bool CreateGroupResponse::IsInitialized() const {
   return true;
 }
 
-void CrateGroupResponse::Swap(CrateGroupResponse* other) {
+void CreateGroupResponse::Swap(CreateGroupResponse* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void CrateGroupResponse::InternalSwap(CrateGroupResponse* other) {
+void CreateGroupResponse::InternalSwap(CreateGroupResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(groupid_, other->groupid_);
 }
 
-::google::protobuf::Metadata CrateGroupResponse::GetMetadata() const {
+::google::protobuf::Metadata CreateGroupResponse::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_GroupServer_2eproto);
   return ::file_level_metadata_GroupServer_2eproto[kIndexInFileMessages];
 }
@@ -2723,8 +2723,8 @@ template<> PROTOBUF_NOINLINE ::ik_GroupServer::AddGroupRequest* Arena::CreateMay
 template<> PROTOBUF_NOINLINE ::ik_GroupServer::CreateGroupRequest* Arena::CreateMaybeMessage< ::ik_GroupServer::CreateGroupRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ik_GroupServer::CreateGroupRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ik_GroupServer::CrateGroupResponse* Arena::CreateMaybeMessage< ::ik_GroupServer::CrateGroupResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::ik_GroupServer::CrateGroupResponse >(arena);
+template<> PROTOBUF_NOINLINE ::ik_GroupServer::CreateGroupResponse* Arena::CreateMaybeMessage< ::ik_GroupServer::CreateGroupResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::ik_GroupServer::CreateGroupResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::ik_GroupServer::QuitGroupRequest* Arena::CreateMaybeMessage< ::ik_GroupServer::QuitGroupRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ik_GroupServer::QuitGroupRequest >(arena);
