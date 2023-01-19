@@ -21,8 +21,8 @@ void GroupService::addGroup(::google::protobuf::RpcController* controller,
     sendRequest.set_request_msg(request->SerializeAsString());
 
     std::string sendStr = sendRequest.SerializeAsString();
-    int clientFd = master_.getService();
-    while (clientFd == -1) {
+    int clientFd;
+    while ((clientFd = master_.getService()) == -1) {
         master_.getFollow();
         sleep(1);
     }
@@ -52,8 +52,8 @@ void GroupService::createGroup(::google::protobuf::RpcController* controller,
     sendRequest.set_request_msg(request->SerializeAsString());
 
     std::string sendStr = sendRequest.SerializeAsString();
-    int clientFd = master_.getService();
-    while (clientFd == -1) {
+    int clientFd;
+    while ((clientFd = master_.getService()) == -1) {
         master_.getFollow();
         sleep(1);
     }
@@ -97,13 +97,13 @@ void GroupService::quitGroup(::google::protobuf::RpcController* controller,
     sendRequest.set_request_msg(request->SerializeAsString());
 
     string sendStr = sendRequest.SerializeAsString();
-    int client_fd = master_.getService();
-    while (client_fd == -1) {
+    int clientFd;
+    while ((clientFd = master_.getService()) == -1) {
         master_.getFollow();
         sleep(1);
     }
 
-    if (::send(client_fd, sendStr.c_str(), strlen(sendStr.c_str()), 0) == -1) {
+    if (::send(clientFd, sendStr.c_str(), strlen(sendStr.c_str()), 0) == -1) {
         // 如果发生失败
         controller->SetFailed("quitgroup command send error");
         // 打印错误信息

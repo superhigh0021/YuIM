@@ -20,8 +20,8 @@ void OfflineService::WriteOffline(::google::protobuf::RpcController* controller,
     sendRequest.set_requestmsg(request->SerializeAsString());
 
     std::string sendStr = sendRequest.SerializeAsString();
-    int clientFd = master_.getService();
-    while (clientFd == -1) {
+    int clientFd;
+    while ((clientFd = master_.getService()) == -1) {
         master_.getFollow();
         sleep(1);
     }
@@ -51,8 +51,8 @@ void OfflineService::ReadOffline(::google::protobuf::RpcController* controller,
     sendRequest.set_requestmsg(request->SerializeAsString());
 
     std::string sendStr = sendRequest.SerializeAsString();
-    int clientFd = master_.getService();
-    while (clientFd == -1) {
+    int clientFd;
+    while ((clientFd = master_.getService()) == -1) {
         master_.getFollow();
         sleep(1);
     }
