@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ik_Proxy;
+
+message ProxyMessage {
+    bytes type = 1;
+    bytes requestMsg = 2;
+}
+
+message ProxyResponse {
+    bytes type = 1;
+    bytes responseMsg = 2;
+}
