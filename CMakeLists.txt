@@ -1,4 +1,4 @@
-# add_subdirectory(src/ChatService)
+add_subdirectory(src/ChatService)
 add_subdirectory(src/FriendService)
 add_subdirectory(src/GroupService)
 add_subdirectory(src/LogServer)
