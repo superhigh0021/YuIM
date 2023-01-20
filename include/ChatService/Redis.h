@@ -12,6 +12,11 @@ public:
     // 初始化Redis连接信息
     RedisCli();
 
+    template <typename T>
+    RedisCli(T&& ip, uint16_t port) :
+        ip_(std::forward<T>(ip)), port_(port) {
+    }
+
     // 释放连接
     ~RedisCli();
 

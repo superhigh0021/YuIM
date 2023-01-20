@@ -30,7 +30,12 @@
 
 class ChatServer {
 public:
-    ChatServer(std::string&& redisIp, uint16_t redisPort);
+    template <typename T>
+    ChatServer(T&& redisIp, uint16_t redisPort) :
+        redisClient_(std::forward<T>(redisIp), redisPort),
+        stub_(new MyrpcChannel),
+        offlineStub_(new MyrpcChannel) {
+    }
 
     // 开启服务
     void run(std::string&& ip, uint16_t port);
@@ -43,7 +48,7 @@ public:
 
 public:
     // 根据host建立连接
-    int establishConnection(std::string&& host);
+    int establishConnection(const std::string& host);
 
 private:
     ZKClient zkClient_;
